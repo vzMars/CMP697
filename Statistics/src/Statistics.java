@@ -33,7 +33,7 @@ public class Statistics {
             sum += this.vals.get(i);
         }
 
-        return sum / this.vals.size();
+        return Double.parseDouble(String.format("%.1f", sum / this.vals.size()));
     }
 
     // Get the maximum value in the list
@@ -101,18 +101,18 @@ public class Statistics {
     }
 
     public static void main(String[] args) {
-//        ArrayList<Integer> values = new ArrayList<>();
-//        values.add(10);
-//        values.add(2);
-//        values.add(38);
-//        values.add(28);
-//        values.add(35);
-//
-//        Statistics statistics = new Statistics(values);
-//        statistics.add(5);
-//        System.out.println(statistics.vals);
+        ArrayList<Integer> values = new ArrayList<>();
+        values.add(10);
+        values.add(2);
+        values.add(38);
+        values.add(28);
+        values.add(35);
+
+        Statistics statistics = new Statistics(values);
+        statistics.add(5);
+        System.out.println(statistics.vals);
 //        statistics.clear();
-//        System.out.println("Average: " + statistics.getAverage());
+        System.out.println("Average: " + statistics.getAverage());
 //        System.out.println("Max: " + statistics.getMaximum());
 //        System.out.println("Min: " + statistics.getMinimum());
 //        System.out.println("Median: " + statistics.getMedian());
